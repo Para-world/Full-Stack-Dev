@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+#main {
+    background-color: cadetblue;
+    color: black;
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+}
+h2:hover{
+    font-size: 1em;
+}
+
+/* teach him the concept of how to target a particluar tag h1, h2,h2 or any tag */
+/* teach them the concept or differnece between id or class or why should be use it, and how they works */
+/* give him pratical or concept knowlede of margin and padding by demonstrating the pratical in code */
+button{
+    margin: 40px 30px;
+    font-size: 600;
+    padding:30px 15px;
+    background-color: transparent;
+    font-weight: 500;
+    border: 4px solid crimson;
+}
+button:hover{
+    background-color: black;
+    color: red;
+    border-radius: 20px;
+}

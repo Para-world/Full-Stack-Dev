@@ -1,0 +1,75 @@
+div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: auto;
+    display: block; 
+
+ } 
+span{
+    background-color: aquamarine;
+     width: 100px;  /*height and width won't work on this  element because it's an inline element */
+
+ height: 100px; 
+    display: block; /*here the display block works because it is not a block element */
+ } 
+ div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: auto;
+    display: inline;
+}
+/*span{
+    background-color: aquamarine;
+     width: 100px;
+     height: 100px;
+     display: inline;
+} */
+/* div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+span{
+    background-color: aquamarine;
+     width: 100px;
+     height: 100px;
+     display: inline-block;
+}  */
+/* div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+span{
+    background-color: aquamarine;
+     width: 100px;
+     height: 100px;
+     display:none;
+}  */
+/* div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    visibility: hidden;
+} */
+/* span{
+    background-color: aquamarine;
+     width: 100px;
+     height: 100px;
+     display: inline-block;
+}  */
+/* div{
+    background-color: hsl(198, 85%, 54%);
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+span{
+    background-color: aquamarine;
+     width: 100px;
+     height: 100px;
+     display: inline;
+} */

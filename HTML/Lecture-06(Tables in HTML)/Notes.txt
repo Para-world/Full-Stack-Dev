@@ -1,0 +1,94 @@
+1. Basic Table Structure
+HTML tables are created using the <table> element with rows (<tr>) and cells (<td> for data, <th> for headers).
+
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+    </tr>
+</table>
+
+Result:
+
+Header 1	Header 2
+Data 1	Data 2
+
+2. Adding Table Borders
+Use the border attribute or CSS to add borders.
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>30</td>
+    </tr>
+</table>
+
+3. Table Caption
+Add a caption to describe the table.
+
+<table border="1">
+    <caption>Employee Data</caption>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Manager</td>
+    </tr>
+</table>
+
+4. Merging Cells
+colspan: Merges columns.
+rowspan: Merges rows.
+
+<table border="1">
+    <tr>
+        <th colspan="2">Employee Details</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Address</td>
+        <td>123 Street</td>
+    </tr>
+    <tr>
+        <td>City</td>
+    </tr>
+</table>
+
+5. Styling Tables
+Use CSS for a professional look.  (optional)
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+
+
+
+

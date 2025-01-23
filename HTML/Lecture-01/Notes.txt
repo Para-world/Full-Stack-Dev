@@ -1,0 +1,54 @@
+Lecture 1: Introduction to HTML5 (Interactive)
+1. What is HTML5?
+Definition:
+HTML (HyperText Markup Language): The standard language for creating webpages.
+HTML5: The latest version, introducing new features for multimedia, semantics, and better integration with modern web technologies.
+🔍 Quick Check
+Which of the following is true about HTML5?
+
+ 
+ HTML5 introduces new semantic elements and multimedia support.✅
+2. Why is HTML5 Important?
+Semantics: Improved readability for humans and machines (e.g., <article>, <section>).
+Multimedia: Simplifies embedding videos and audio without plugins.
+Compatibility: Works across all modern browsers.
+APIs: Integrates with powerful APIs like Geolocation and Web Storage.
+🎯 Drag-and-Drop Activity
+Match the following features with their descriptions:
+
+Feature	Description
+Multimedia	Embeds videos and audio without plugins
+Compatibility	Works seamlessly across modern browsers
+Semantic Elements	Improves content readability
+APIs	Adds features like Geolocation
+3. Explanation of Key Elements
+<!DOCTYPE html>
+
+Declares the document as HTML5.
+Ensures browsers interpret the page correctly.
+<html lang="en">
+
+Starts the HTML document.
+lang="en" specifies the language as English.
+💻 Interactive Code Editor
+Try editing the code below to declare an HTML5 document:
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interactive HTML5 Lesson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Welcome to Domain</h1>
+</body>
+</html>
+Test Your Knowledge
+Question: What does <meta name="viewport" content="width=device-width, initial-scale=1.0"> do?
+
+ It adds multimedia support.
+ It makes the webpage responsive.✅
+ It specifies the title of the page.

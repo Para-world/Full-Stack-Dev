@@ -1,0 +1,97 @@
+HTML5 introduces powerful tools like Canvas and SVG to create and manipulate graphics directly in the browser. 
+These tools are commonly used for data visualization, animations, and interactive elements.
+
+1. Canvas: The Basics
+The <canvas> element is used to draw 2D graphics dynamically using JavaScript.
+
+Syntax:
+
+<canvas id="myCanvas" width="500" height="400"></canvas>
+
+Features:
+
+Flexible: Can be used for animations, games, and dynamic charts.
+Requires JavaScript: Canvas is blank without a script
+
+Drawing Example: A Rectangle
+
+<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000;"></canvas>
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 50, 150, 100);
+</script>
+
+2. Canvas: Drawing Shapes and Text
+a) Drawing Shapes
+Line:
+
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
+
+Circle:
+
+ctx.beginPath();
+ctx.arc(150, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();
+
+b) Adding Text
+ctx.font = "20px Arial";
+ctx.fillStyle = "red";
+ctx.fillText("Hello Canvas!", 100, 50);
+
+3. SVG: Scalable Vector Graphics
+SVG is a markup language for creating vector graphics, supporting interactivity and animation.
+
+Syntax:
+<svg width="400" height="300">
+    <circle cx="200" cy="150" r="50" fill="blue" />
+</svg>
+
+Features:
+
+Resolution-independent.
+Ideal for static graphics and icons.
+
+4. SVG vs. Canvas
+Feature	Canvas	SVG
+Type	Bitmap graphics	Vector graphics
+Scalability	Limited (pixelated on resize)	Infinitely scalable
+Performance	Better for real-time graphics	Slower for complex graphics
+Interactivity	Requires JavaScript	Built-in support
+
+5. Animating with Canvas and SVG
+a) Animating in Canvas
+
+let x = 0;
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "green";
+    ctx.fillRect(x, 50, 100, 50);
+    x += 2;
+
+    if (x < canvas.width) {
+        requestAnimationFrame(animate);
+    }
+}
+
+animate();
+
+b) Animating in SVG
+
+<svg width="400" height="200">
+    <rect x="0" y="50" width="50" height="50" fill="blue">
+        <animate attributeName="x" from="0" to="350" dur="2s" repeatCount="indefinite" />
+    </rect>
+</svg>
+
+6. Practical Use Cases
+Canvas: Games, real-time visualizations, photo editing tools.
+SVG: Logos, charts, responsive icons, maps
+

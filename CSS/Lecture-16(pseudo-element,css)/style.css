@@ -1,0 +1,34 @@
+h2::first-letter{
+    font-size: 200px;
+    font-style: italic;
+}
+
+p::first-line {
+    background-color: hsl(0, 80%, 67%);
+}
+
+p::selection {
+    color: white;
+    background-color: hsl(0, 72%, 46%);
+}
+
+#names li::before {
+     content: "✌️";
+}
+
+
+#Mohit::after {
+    content: "👨";
+}
+
+#Rohit::after {
+    content: "👯‍♂️";
+}
+
+#Sohit::after {
+    content: "🤦‍♂️";
+}
+
+#names li::marker {
+    content: "✔️";
+} 

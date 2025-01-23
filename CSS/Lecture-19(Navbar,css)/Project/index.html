@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSladge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Preloader Spinner -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Navbar Section -->
+    <header>
+      <div class="navbar">
+        <a href="#" class="logo">Go-Crazy</a>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <div class="dropdown">
+            <button class="dropbtn">Our Services</button>
+            <div class="dropdown-content">
+              <a href="#">Service 1</a>
+              <a href="#">Service 2</a>
+              <a href="#">Service 3</a>
+            </div>
+          </div>
+          <a href="#">Contact</a>
+          <input type="text" class="search-bar" placeholder="Search..." />
+          <button class="login">Login</button>
+          <button class="signup">Sign Up</button>
+        </nav>
+        <button class="menu-toggle">&#9776;</button>
+      </div>
+    </header>
+
+    <!-- Carousel Header Section -->
+    <section class="carousel">
+      <div class="carousel-slide">
+        <div class="carousel-content">
+          <img src="https://via.placeholder.com/1920x600" alt="Slide 1" />
+          <div class="text-overlay">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover the best services tailored for you.</p>
+          </div>
+        </div>
+        <div class="carousel-content">
+          <img
+            src="https://via.placeholder.com/1920x600/cccccc"
+            alt="Slide 2"
+          />
+          <div class="text-overlay">
+            <h1>Quality Services</h1>
+            <p>We ensure top quality in everything we offer.</p>
+          </div>
+        </div>
+        <div class="carousel-content">
+          <img
+            src="https://via.placeholder.com/1920x600/aaaaaa"
+            alt="Slide 3"
+          />
+          <div class="text-overlay">
+            <h1>Contact Us Today</h1>
+            <p>Get in touch for customized solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dodge Cars Cards Section -->
+    <section class="card-section">
+      <h2>Our Featured Dodge Cars</h2>
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/charger/vlp/desktop/MY23Charger_VLP_Desktop_gallery2.jpg" alt="Dodge Charger" />
+          <div class="card-content">
+            <h3>Dodge Charger</h3>
+            <p>
+              The Dodge Charger is a powerful muscle car known for its high
+              performance and iconic design.
+            </p>
+            <button>Learn More</button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Dodge Challenger"
+          />
+          <div class="card-content">
+            <h3>Dodge Challenger</h3>
+            <p>
+              The Challenger combines retro looks with modern performance for an
+              unbeatable driving experience.
+            </p>
+            <button>Learn More</button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMWFhUXGBgXFxcYGBcXGBcYFRcXFxcaGhgYHSggGBolHRcXITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGi0lICUtLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAIDBQYBB//EAEUQAAIABAMEBwUECQIGAwEAAAECAAMRIQQSMQVBUWEGEyJxgZGhMrHB0fAUQnLhByNSYoKSorLxFUMkM1OzwtJjg+IW/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAKhEAAgICAgECBgEFAAAAAAAAAAECEQMhEjFBBFETIjJhkbHwI0Jx0fH/2gAMAwEAAhEDEQA/APKsNUGhIHfp8YnOJp92o9PdDZcpjS1O4w6bJUXPje4oaX98ZXsaRMuMFPvDut8RA8+YW1J9/rrDDlpYnxMdlpXnDAioRviVZxjk0U1hlt1YAHmYYciw0ARPKA3QxkTpSOMsE9U5uFqOIFYZlIOlPT3xI6BqRIKfteYMFrLruhs7DEfdI8IYqHSKRZSHAGh+u6I9myEa1fryi8TZEwDsKG8ojJkjHsuJQGeQ2teF4MXa9KDKO/tA+YNPSG7RwxBqy053iv66pApcQR4y2gsLxuLLbz51hYbHOBY2FqEmnlpFfjZh32gyTIBU0dTTcSQfURajRNjpW0AWAagPGtDf8NB5rE2PLGgViw3mpPrU/CKVJa5jUG313GL7ZIlNZgV53pTibEQ6IbsDxqS5UvsXc6ltT5e6AJGBZlMxmUDn2t+8D2YttpygtxNpvCrUr7qA+MVk6erCrFi1PPzBEOySfBbQkgFGSvBgTUHiNKRY4edOw9GJLS3HZJAIYNcVLX05/GM3luSRbdWCHxpZBLrVbUGYnTSxFPdCoCw2ntAmwZgK1yklgO69APCJ9lSM65hMyuDYUFTp7LDfrY0HO8VGHl2oVN+NB5V01i2w+FOHKkzFavslSDQ66g1A9IlgaieiLJDTCBTUFGluwpqGI7J9m61Gtoj2aiu4Yz0CDcXQOQAaBiVS4PEkHjDZ21pU1SJ0+lqZaZ6HcQ2VajlUxSYvCqKNLJmqDT2Kj31A/h3xnxKs7tCWRNdg9TX2mKtUrShBAoDTwtBeytoghSWZDcZlOWu83D+ltdDFXMlkOtK5VIOUhTl32yEW5UEajCT0GaWiBetBAOUs2YA67lIva9bWhT6HEPcv1dUCzK1Z6igOUDUVGV7XtzvW+f2tsuQ6lusSqqCBnBVM1a9oHlYFSd3OLWTmly6At1ysFDKerIWwAAQ0ZeXarwEVXSPaZmgZjRlqsxgBmcC4DAkOB+IX9I58afK7NcjVdGc2YA8xE1VWNW0FL7z8YtZWAmFpjACYqLmqKKpRO0CMqkE0HC/CsQ4CXKBZRMOdrZ1LBWO5ai5HvoOMaHZ8uVLZVY0YEhgWVyv3X7CscpNLcQAaRtObbaowS1YOu02B65hMyZQyMxz2qQaZmJzAAUJYH2u8QGbSShWYjEvQrQqbHUXANOyaGlt3ZiTaGxuomZpLq6OCqq7dpZdCKVIuKkiopaor2oplxzqvVsp6shqr2u0wHZzhWteg0FvOJjji1oGGTsbMZwWcOgXKUl5752dictfaGatdNRvYRczMXkos0M5oKFXydn7tVoCCRe9zmB3xmpGIBXKpcECmawtRMxtzG+oofCJ8ViTPysuQADLRursQSbZ70ow5VrGc4Xp/z8FqVbM/NngU0/liGdiailjzpeGzDXX3REyd0dqVCHKIIlMN6j1gdaxJl74oQVKwwc/Mge8xI2zDu9L+6A6U0J8onlTiLEnxhUOzj4Vl1FO8Uh8oEQVh5++o8oJ64G/Z8hAykV5mkbz5wjim/abuqfdDMa1TYXruFPjEcsPW9fGFQWTSjxid5Dbq+APwiXBSC2+WOTNQ+6G4ySV4fwtX3QAE4Zcps99PZvGq2DtADss3n+cZuRIzb0gmbLZCtFU2Fxf4RGSCkqKRqtsbP6yWclD4/nGBfZcxH7S2vppFxszFtlLTJiS5eahdrKDSuUACrtS+UAnuEHY3pTs9bS1eZ+84Ybr0UZQL8SYjDinDS6JlJGL2gQCoPzg7ZXaIA32qCfkfdFnM6XYWtfs1SNP1cr31rFXj+l02YSBVE3KppbmRr7o6+JHIJxmHcHsqxPIV86CGycLOP3DX8QU/CKn/AFduHrBKdIiqBUXKT7T1qzcgadleQg4oTkyzxuCxdlKotKXzyg1v4qwJM2HPPtOjf/ZU++K//Vjw9Ymwu2FDAuhZRuDUr48IfFE2GJ0VmNQo0snfdia9+WkTL0JxJAP6ocjMFfKlB5wbK6dIAB1DADcCtB4QSnTyX/0pn9Pzg4oLBZfQzEurB2QZFJUNMTtsPurStzzoLawAejWOl9sYcsNLGVMr/CCfdHoPQvbUvFzCqIwYUqWAoATqL3Nj6dx3TIo9la8PZ9S1TBwT6E5V2eAYh51As6QyLoT1NCP4iPSIz2CFzAk6GtKjgaVqdd8e7bM2iJ8pZiIKGoKuwDKysVZSAhFQylTzBhTsJImNkm4dWNMy2Q1oQDlJC3FRqN4pW9E8TFyR5Hg8KySmxCODQ0dTQ1WxOvfwiHFbTCzRNIzA0ob2HKhv3EecbXpj0RDSmbBsVdQWaS4NZiAdrKG9ojXs23c486wuNltllstU+9qDXipU+8Vjmnia21/w1iy5xoaaqzZI7aiuXKpUqwvlBtvNqeUVOHTMxVFysw7QCnLXhQFj4e6LFMWmFJMtgy1DZCGuN285fG/ugzFbQlPlnSW6l8rEfeUPXQ9kktTdTzjOKS8aE3ZWywZAYtlS9SnZZq37NTUqDUi7V36iHScVImTQwDSwasM3V1Whzg5RTKKfvEG9uFRtDbU9+zNbMRauUAm9TooNDA8nGsBQVFK0030BBtcH5RqsfkdmkxGLUscSqqwNVDL2ctAoFRlud1SbgkUFmgKRhGmKMomdk3Wj0YGgJogqBSg+MWuwdpzsjdUmckE9mtQWNTofasTvPs7o7tLHozqubNlUE5WaXkfWluyTmBJoPEHTO3F0kSVsro/KmVyzGViD2bEAihOYi+lDSlRUDWBH6MT62AI3FWBFj6Hviwd1VC5TssS1aGoOYhatU04XavYO8gkaRtCoq5JNgKEigAAA9m+msL4mVdfoejLBh+1D5ifvA+PzgMGD8NPy8PjHUMjCGkKvGLVp9dAvv+EBTcMdbU5awkxg9Pr6MEhB9f5hiYa9gYleS24GKGSpUCgiSSSRoT3f4gdcMx1BghMOabx40gYIHZWr7JGuo/KCJQMMloM3aJIpxJh7kUNB9ecRYwiSoPDyiOYt9YE65h/gRPspTiJolJlzmtAWVdAWNyQNAd8CQ7LrZ68jXzpBu0MWspFdmJJssugq5HeLKLVbQczQEKZiRJQO5LMSVVBYuw3cgK3O7vIiinibPmkVzOQM7aKi7lHBRuH5mK4p7ZMp0qQNjMS+ImbjSyqLIg1IUbhXebk61gnF4RZUonVzapB3604Wi1kYHq0CgKBqSaEk8dYo9uz8zhQahRu4mlfSkHLk6RjdldDito5KFT3R2bpGhRGaRIlDEVIfLt5H3QwOuKQliMCJ5HtA+fkRBQiVUoK+njSJFTfWJcHJzJqtaG1QDYM2h1rSlt9OMKTfdEgelfoZk/8AOmU9nNf+D5kR6SdYx/6KcJkwbM1sxIBprVrf2U8Y0+1NoysNKadPcS5akAkgm5sAALkxrDRnkTdIrtnL1WLnyvuzMuIThWZVZoHc6Zjznxb4rCs6VT21OZCdMwBsTwIJU8mMZCb0y2fOn4eZKxKhk6xHL5k/VzUraopUTZck33AxpMJj3muq5ioKFgUymXQOFBVxVSSDcVqPWK5JiUGuyxwmTESg1wrCo3OjA7uDqQR3giPFOluxlw2MbPmQMxbsDR/vgVNlNQ43hZix6lsjaSpjZ8gMGRmE0UsELS+2DXXM8uY3iYzXT11xecKKzZNWNqgqtGVuQyO/flThGM9myWjCz5CTGMzrWILEOXuwAAymoajW3nSJtlYUFh2iDWzBxmy27IUAZ2Njr84rsFaZchRW9VFBWwJrTs77Vi+m4AJLVi1HKl2+8GGisgAtqL+RMcs5KLWwozm0sGvWErXLmIzGtKgmoqddRv8AGJFl0Uy1ympDA0qxy7h2qd4vfSL6TgJWIlPla4UXI7WdRpRVqRZr2rm0NIosHJmf7hYKBZTYVFABQ0HC/KKcr0NJiONnYdDK9kNqSCDUgXUjkKV514QC75qV7RNak61J899Y0c9HmkM9Goe1UUy21oQa2HHdA0zZDMaroDTKBTiSSQAKc4FKJfw2V0jPQAucoFQpYgUqdAKjWto0OCkyyDZSAzBayy1q1pXPpeIZezRlrlAvqfa7NRS/GvdYRc4fALlsB50jDI7RXBnmU/ChT8b/AChplkQdjpoIsT7oB60bwT5COtO0Zj+rh8taEXhS3G4HziZVrugGE4eVU2BJ5GL3DdHJ8wVVKVvd1Hvipwc0pda+kWi7amAUzsO75VhNlUwyV0Unj2ur8ZifAwBicIyWyqx/dct7oJlY9plsz+Q+LRZ4LDqt87V5sPgYlyaKjCzOScHMJPYpzIb4wYuwJjA3HkR8I0EzEPXsGvmYKw5fJnfLl8D6CJTk+kauMI9mSx/RhllOyqSwUkUK3NOAJij6O9E50xJuKmVlyJHttcPMJ0lyhSpdqgZtFrW+kegsyV9m/d8YCx+3TIWZMlIrZKK7kVRGewB4tyGm+lo2hCS+o5pzi38qMfJw8+YxmnDzAQoWUoluERRUALUWUX33JJ1Jg3ZpmSRl6t60zOapckgbzWxIFPzivxnSQzD25xbkM1PKgERSdrSajO75d+VRXwqaRbSZmXs3Fk/cYn+D/wBopH2DiWJZpeWpJ7TIuv4mEFN0mlC0omUvECrnvetfAUiGTtNGaivUnk1fdCjBICJNizRUdnwdT8YX+jOa1IHAAoam9vbt+YjU7E2G87tO2WXx3t+HdTn79262b0floKpLA5k1PmbxVAeRS+i2IYVEtqVIBot6AG1W07Qv8okPRHE/9N/AKfc8evzpqpuEC/bCdD5QxHmEnovMX25E89yfIxM+xEpTqMQp3HqpjX5ihtHpmSYbkN3moHmYlk4Ga2inzt56QCas8bOzZg1lTB/Aw94g4SZs55arIYkKFqktlL00ZhoGAoC1q0qb1J9nw+wmPtTAvdUmD5ex5SZe0zEsLFiAeNlpuqfCE2OgTZE77LgpUuaLLVmIv7AzEDjeojCfpd23JxGBSXLnK8wTpc1kBBOUpMG40qC61Eb7pBg1nK8lqqhUoKWoKUqvvjBdGP0ZSmLjFtMJD0Tq2CqVpUH2amvI8oPA62eOCQ3CPYv0Q4DFS80maE6qhmBDVnRqqtKAgKCDU33RscH+jrZsq/2dW5zXdwfBjTyEXmFGGkApKRJarTMEVZaitKV0G8QUVYPsbo3JkNnVTmpTMTU0qzUAFAB2jxNLVg7HyUAdhKSrKczWDUI10vYekAYnpLJU9kM/oPXWKDF7cZ+sGWgJBBzVNgK7hz142AgFozuO6ISZjzKzGNLqM1Ki9qkaD4RXpsFwvVp1bMSWo7MSVFt9NOXCNGprrcECoHC9O7fA+OBVQLKbZT7XupWPNy5GpuB1Y8cZRTANk7KEuSetUBibXvYNQX01qV4HviSVs+qhCF7ChmFAKHUHhegtreC3Oiglra1052+raQ3aDs2i1uFZqKCa3HM6G3IxxzyylI1glFFRKw6jM5sCLWUV3CtO/wA4JlSAsvMXPaIotxY5jcbjZbRLtnFMio5VQlQAgrUUFQRW2oPlEeBmJOYFgQB2qagnNQE2rWlvDhFqcmrCL2TphyVAcZr7jagY8KDlxib7NyYd1KamCRiBXKdK0FL0BNgFG7nzEFgTDdTQcyawRnKto3cYnirKTrU+cM6gcPrzjWy9iLqUYjyiKfggNJYHi/wj1Oa8HnfDl7Gaw8qp4RZSMOToyDvMOOB7hzAp6sYklYbdXzJ/8TDbBJ+xMmFIFTNl/wBXwUxIuFroyHxf4qInkbCZqHs07r/1D4xfYHYAAGaae6qU8gTEOVGihJlRhdlk6qKcQG/KLCVkl6BSe784dtLF4XDukqaJtGUtmlZM2tBXMt1PasPMRI4wJoZeOF1VqPJmDIW+67ys4DAkA2pU6xpBKStkTk4OkRDGg+14cPKJUny/oGMztTbqSpjS1AmFSRmVuw1N6mlad4EAHpX/APCP5z/6Rsq8GDt9lr0h6RqtZUpqNozaZeQ5893foB0Z6Qrh+sRzmlvQkChIYb6H6sIy7NUliakkkniSak6cY5l5wWFHpeE25hpiu9KKgqzMqgd1ianl8xA//wDT4P8AZ/oT5xiTix1AkgUq+d2r7XAUpYC3lAYQcYANrjOlUs2lSkHNwv8AaPnEmxMMcQetnuCgJooooYg3stKKD4mkYfII1GD6QypaKglvRVA1S9Br7UAjfiethUUGg4RIrryjEyOksg6rMHgp/tYn0i52Ti0xDZMP1kx6FiqI5IAoCTa2o14iGBo5csHhBsnKN58LRSNJxCayWH4pmHl/9yaDB2zsFipys0oSGCe0ftMohd/aMrPlgAt0xVNFFeOp84nEya4qKgfP/EZaVtah7WL2eB+7OnTD/TIA9YtNnbfpTLNw84Vv1JfOo3krMUE7rfkCux2aDD7OmN7TNTvP15Q7CpL6zLQmgJqTw5RKm1LBicwtfkd4NbiBWYI4LEZb9rQUYWPdu84QyyntJALzNBbU6kVAArqYptp9IgvZlSxYil6DW57OvnAO3doI2USmzAVJoCO0Tz1tQRXDDA5aBi2jDdUi2l9xhgTYnbE1z7ZvuW3uuYCAepNTck3bjStvCLSTst99EHmfT5xN/pSb2Y+XygEUvVcWENWSzEBe1W1BrF7PwUga0XvYg+pgeQhlTGaUudurqgqKlmqFoTbUa8/GCwoIw2xigIdiCaAgUtS9GBF6hhTxiTEbOQi5K2oPnSkZHoRtTFmfipGLLGbablahysCA+WleyRMWlDSwI1vupeEmtcCleNAPM/OseP6uM3mfFM7cKXG7KRNnItRnds3IW3DTlET7PAWhLX3rQE7r0NdN0aZNjj77+C/O3xg2ThJaDsr53/L0iYejyS3J0JyS6Zl02V1i5QjNbLpS3C+nfBWB6KmXZVRBzcn0GvjGkZ+Zp6eURZxHSvRRqm2TyApGwFGsz+VQPU3gxdlSRa573b4Q0zDxhKx4xrH0uGP9v53+xWzDIZY1NTyWvvAjuSQ2st28TT0X4xYthmbRT4W90NGyWOqn+I0994y5ex2uJWNs/DH/AGFPeGJ9Wh3+myx7MsDw/MRafZKalafirEc1P3q92kHNiUECJs+UNcw8MvxgmSkldKn+r3CsQzMCrcTyqT6CHS8FQWFAOQ/8ojky+Jm+kOGwM2eTPxE3DzAoRGEoTJVCpJqKVz9o3BtbQgGKXpDsaRISZNwuOkTpQsqF6YgFgAaplFTXNcaCkG4qbmZq0NSe65ij2xssMtZQCsNwsGHuBj0IwpUeTOXKTZlz9fX+IbUfX18YJfZU7/pt7/dD22TMVGmOAoA3mpJJoAAOZ3xdCAvr63xyv19X9IWY8vKEXPL1+cAWKo+vo+4Qq/X1X4QVtDCNKKqxUkqGIGbs13HnY+UDV5epgCxAD6/Mn3QbgdndYrMZ0iXTRZkzKW/CKMPOnKsDSJTOwRUqx0GblXfHJskqaEFWG42Pgd8AWWU3Y+UAnEYehVnBDuQQppaiXJIICgVsagQLJmXIryqN476A+6BAp+qfGJ8NJdzRRmPLtH8vGHsTovNk4bMBSSWIIJCoWzDwU0+uEX+D6O4rEsJMjDzZTN2S7S3lS8tAT1jhfZsTTeaam0CbJw2PlKVlYp5CsalZcxxU0pU5d/jBf2LFN7e0MS3/ANk4++ZCoQzE/o72lKmMn2YzN2dSpQ3rVWJFuRoeQhYTotjsMTNdElKgJYvOkioG4KHLEncAK3iVOjaOf1k6c/e1f7gffFjh9jYGV7MpXfi5LU8PZ8KQ6A0nRfEM8gBxRvaAHO58Tr42gqVhzPBZ3yyJVb8Trb6tXnelweJNSAaAg15DefrjBm1dlNi5Qw4nGTIUVmMoqzk/d4AV7+HeMaQ3D7Y2dMmCVh5pdhqrECtL1QrTORSpAravCL+RJVAMu+lTvNjHiPSLYL4Gajy5vWSy1Zc1RlKutwGFwrCxG40PAgexbPxwmYdJop21VgL0GZQwHrCsYTiMQFIFyx0UXY+ETLsucwzTpgw6blF3Py+rQFgJzS6sKdY2sw3PctdO4AmJJsy9XJZuZ7Xl93xvyiXJFJWSTdkyLhQ7He7MQfLRa8x4GKfE48S52VaDq5Zy8maoH1zgydidKmla5QLCtCbDwjEY7FGZjJircsj0A35mSWn9tf4oavyGvBf9DmEzHGev3ZExKmtSrTZRStzeom6emkb3rDzjIdFpUtDh3lA0m4ebmJ3tKmSRWm4UYnxManrDEsuPRLm5xxph7vfEPvjtYQzueGmYTvhpeGloAJLwhM5wO02IjM5wwA8rHVyfE/KJBKXefU/OA1n/AETD1ncie4fGPMtHphGRNw9B8bwmI4fXjaGCbyHiflDhMP7vl8YFICaUZdLqxPfb+mAtu40Jh5pUInZpmNyoJAJqTaxN90FibXUxTdNJmbA4la/7ZNB+7Rt3dGkZbRE18rMG53qyuOKsDEfWwB0ead1XYClFagDa1PaNDoRfeIuNoYqXLALip3AAVtHoqTfaPKaXggEyK3pASZYUb2FfAGCG2/LGiN/LSBto7clzEChGBBrUmu4jTKKa8YbYii+ymCNn4Ks1K6ZgfK/wiQY9PoGJ8FtRFmK1RQEfV4VsdIi2tKZ5zseNB3C0CjCmLDF7RQuxBFyT5wxcYvEQ7YqCejmEpMLHcLd7fkD5xpOoDWIB7xWnpFNsPGKGYVAqBv4H84uRiv3vWHYUdGHlj9j+Q/8ArHVnAaC3lC60HWhiNlH0TBYqJPtXKHCce6KfE7QyuyZVGUAgmtwd9ORtEeI2jlAOeVfUUNR5tCsdGgkyjMOXrAg52gvEbHEoV+0Sm5ZhXyBjInaSEqudSWt2RYHdW+nPnFioKjT68IEwoucLiQkl3Y0BIFeCqCzt3UBHlB2E2jmw6AtkEysxzrlQcONgFA40jLdKJ3V4ZE3kZfFzmf0Sn8cPmzqYdF4oijuu59QsJN02XJJNJe38/wBDsdNE+XMlilHByClCJiAugJrQ1ym+oGYGtRGx6Lzf+Cw4Y1XqloAFNLDUHfYekZOXsubLk/aCMqr2jWxrLdSVpxI9Kxr9mYYrKlSkBOVVUAXsop5QONk35DjPJ9ns8/vU/FuHIUENk3OVQWbgBXz4QUNnKgBnvT9xbsfEWEU+1ekbKsxcMnVypYJmTQpagW7EkC9Pob4EkgbbObWwTBszzUV1BotSQAbG4Gt6nw7oxnQrFiZtHNahVwK6UQCn9taRWbc6U9Yplyg2U6u57bHeaDS1acIi6GYjJi5R0qSv8ykD1IhiPTNg4zNillBSgky5qZKhiDWTmqwArU8hpGszRkOhuBZWE2Zq8tmBOtHdFFef6onuIjWF+HnviH2ax6Hl90c6z64wPNmUiEud8IYU86IWmRDnGv8Aj84jM0nSGA9ppguRgmYVAh2FwYVesm2HDeTDJuPmMaqSo0AA07+cYubl9P5NVBR+r8FL1tNwHeYkSYT+QPv/ADgaWMu7xoB6m8Sgj6v744dHVseRfUelfSsNaYF1r9d5rHDPBsP8Qxa8fjAhtslGIWujHz/KG49BMkzZZUAPLdTX95SLV33hKAL1Pn9CJpABN/X5RaT7IbR5r0Ul/wDDuK36wnzUAe4xRdIcZ+uIH3RQfHxrWJ5GOaQzqoOUk9k62Nj30is2sc7Z1GtajnWsemeaQfaDC+0coHAI3e+GsYKALGJh32gbx6QDmiTDtQ1p6QwCuvX6ELrF4Dyhv2gHVR5CBmND/mAQWJijhDuuXjAJbw9Idn+vzgAPXEDj6mLLZu1srBWaqnzH5RQBoWbn6/CADb4nDo/tKG4VgGfsyWVICgNuI+tI7sOeWlXvlOUHjBTsOMJjMfPGVuHkO+NvgZuZUPECvlf4xRY/Z2dqqaA3I313+cXuzpXVqKkigNLDU+7WC6Ap+l+IzTlQaKK/zm1f4VTzjQ7KwDThJpoiM5NQKWWmvMRh8ViOsmO/7TVH4RZR4KAI9W6CKGwmXe4SUCNbtU/9sAczB4BdlRslP+FxCN2qo1KneFzMfAZj4RopvSASMPKd5iylyLpZnIXgLs3dGb25j164qiy1VUmH9WCqmqG5BvU0v3U3RidrFnnsCS1DkUXNApoFUbhbQQwZoNu9Onm1WSCinVyau3H8Pqe6K+X0wxQlmUZmaWVKFCiZcrChFlroeMHbD6B4idRnHUpxcdo9ya+dI1GG/RtIHtzZjdwVR6gkwm0CTPJRaC8A7ZwFDFqggKCTUaUAvHsmG6FYKX/s5vxszemnpFvhcNLlikuWiDgihfdCspRZD0fE0yhMnjLMYL2d6qotmrvuTTdYbosWmARA8yI6wiifNEcxohabHJSMx0vCbSVsaTekdJJNKXi2w2FWWueZruHE/OOypCSFzvdtw58BAPWPPfl6AcBHM5PJ9o/s6FFY/vIlmM89+AHko+f1wixlvLlgJa3HfAkyestcq9xO88hy4mKmb2iWbUw1Fz/wDkofdgayTqTbu+Jh4w68Y8+xnTycf+XLVeZqxilxnSHEzPanNTgDlHpGMfTTfY36iK6PUMbPloO26L+JgPQ38opp3S7Dy7Zy/JFP9zUEeb3Y72PmYmXCOdaDvMdEPS15MZ+p+xrMZ09c2lSgObksfIUEUWO6SYmb7U0gcF7I/pivKS11bNyEMOJA9lQOZuY3WKKMHlkzsye1KkEgb4j+1DhDZk9jqYCdaaGLJTD+vXhCZ1NrjnaK4kxypgGF9Qv7Z8vzjowo/bHlAVI7AAfMwv7LLTmD8oacI37SeZ+UB3joY8TAAdJwJrcpT8UTf6cOK/zGKzrG4mO9a3GAC0GyxxT+Yw4bI5r5/lFT1zcYeuKcb4QGlw0p0XKuUDlW8TKp3+lBGaTaEwb4eu0pm9vSGBphyt5RJtPGhJDW7Wgvva1aUud/hGcGNb9o+kB4jEFjdieFTWEB2XG96N7SZMDNCe0CL71BJUkc/wBZTxMYBDGj6L41VZpb3SYKEVpXdruPPdYw0IsMFhy/WO1xSh5mYcvuzHwj0LZGwpGGqUSsxiSzm7Em5ofuiu4Uip2dKSknDSwcoczWJoWNKVLEbqAKKW7XONSoiWaRQ5anWHFgPnDC9Pr6pELP4CJKJS/1vjhfjb3wOZlNNYYGrcwCCC8QTnpEcyfuES4LCNMMTKairZUYuTpHcJILmwi7VUkLmN298J2SQld+4bz+UUhZ5z319BHLbyfNLSOqlj1HbJWZ5z1P+BB0xllrlFgNSPcIflWSuUe3S5/ZHE8zFJPn5zQeyPqpileR0uhOsat9sdMnFjXduHCGtMHGIy0cynlHUlSo4229njgwFLuwWFWSu4secCk1jkdGl0jDb7YS2ObRQFEDuxOpJhsKE3YLQ0iGkRJSFSEOyErDSsEUhZYKCwXLHCsF5IWSCgsEyxzLBZSOdXCodguWFlgrqoXVQUFguWFlgrqYXUwUFguWOiXBXUR0YeCgsE6uFkixw+z3f2Ed/wAKs39oi2wnRLFtSkhgOL5V9GIPpBQWZnIY5kMb3D9ApzXmTJa92Zz5UA9Yt8H0AkD/AJju/IURfSp9YVoqmeWZTF5sXYOLnEdXJan7bdhRzqdfCserYHYWGk0KSUDDQ0zN/M1SPOLGvGJbKUfcrOjWxjh0ozZ5je0+62irXcOO834AXLTQNbwO0wmwhpPnCKJXf8ojPOGs3nDc0IB5HHyiF5kMedFls3ZxY1bT3RnkyqCtmmPG5ukR7PwBc8oup05JC89w3n8o5i8UklaDXcPiYz7F5rm9954chHKk8nzz6OptY1wh2OmO01+foo4CLrDyhKW3ta33czHMHhhLAtfcPiYB2pjCKqDUm5MO3N0ugSWNW+wPaOLJOQEm9zvJ+cRCgFBA9ad5iYR2RioqkcU5OTtnCdwgmWigdokE3sK23b/q0DG0INFEnisKkKFGxgKkKFCgAWWOgQoUAHcsdpChQxCpCpChQALLHcsKFAAssEYfBTH9iW7/AIUZvcIUKE3Q0rZZ4boni3/2co4syinhWvpFrh+gU3/cnS15KGf35YUKMubNvhotMN0HkC7vMfxCr5AV9YtML0awqaSFP46v/eTChQuTK4pFwgAFAAAN24eEO1jkKEM4SIRaFCgA5WFChQxDM/DzhpbcI5CgAaWiJ3JsIUKJm6i2VFW0i12Vsyvab67vnFnjsaspaDXcIUKPPxf1J3I9DJ/Sh8pn8zTH4k6ngIucHJCii7tTw/8A17tY5CjTNJ3XsZ4Iqr9yLaGNyig9o2A+t0VBalzcn3/KOwo6MUUonNmk3IHlXNTp74IDQoUamIxrmkcYwoUMR//Z" alt="Dodge Durango" />
+          <div class="card-content">
+            <h3>Dodge Durango</h3>
+            <p>
+              The Dodge Durango is a versatile SUV with the power and space to
+              meet all your needs.
+            </p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-section">
+      <h2>Explore Our Dodge Cars in Detail</h2>
+
+      <!-- Dodge Charger -->
+      <div class="showcase">
+        <img src="https://via.placeholder.com/500x300" alt="Dodge Charger" />
+        <div class="showcase-content">
+          <h3>Dodge Charger</h3>
+          <p>
+            The Dodge Charger is renowned for its performance and unmistakable
+            design. Known as the embodiment of American muscle, this car offers
+            a range of powerful engines, including a supercharged V8, ensuring
+            speed and thrill for enthusiasts. With modern infotainment, luxury
+            interior, and advanced safety features, the Charger is as
+            sophisticated as it is fierce on the road.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dodge Challenger -->
+      <div class="showcase">
+        <img src="https://via.placeholder.com/500x300" alt="Dodge Challenger" />
+        <div class="showcase-content">
+          <h3>Dodge Challenger</h3>
+          <p>
+            The Dodge Challenger continues the legacy of muscle cars with its
+            bold styling and extreme power. It combines a retro look with modern
+            technology, making it one of the most iconic sports cars. With
+            various performance packages and customization options, the
+            Challenger offers a unique experience tailored to each driver’s
+            preference.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dodge Durango -->
+      <div class="showcase">
+        <img src="https://via.placeholder.com/500x300" alt="Dodge Durango" />
+        <div class="showcase-content">
+          <h3>Dodge Durango</h3>
+          <p>
+            Perfect for families who crave power and utility, the Dodge Durango
+            stands out as a high-performance SUV. It combines ample seating
+            capacity with towing power, all while delivering an impressive
+            performance on and off-road. The Durango balances luxury with rugged
+            capability, offering the best of both worlds in an SUV.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Image Carousel Section -->
+    <section class="infinite-carousel">
+      <div class="carousel-track">
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 1" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 2" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 3" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 4" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 5" />
+        <!-- Duplicate images for smooth infinite effect -->
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 1" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 2" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 3" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 4" />
+        <img src="https://via.placeholder.com/300x200" alt="Dodge Image 5" />
+      </div>
+    </section>
+
+    <!-- Enhanced Customer Reviews Section -->
+    <section class="customer-reviews">
+      <h2>What Our Happy Customers Say</h2>
+      <p class="section-description">
+        Discover why our customers love their Dodge cars. Here’s what they have
+        to say about the performance, comfort, and thrill of driving a Dodge.
+      </p>
+
+      <div class="review-carousel">
+        <div class="review active">
+          <p>
+            "The Dodge Charger delivers a powerhouse performance! From the roar
+            of the engine to the responsive handling, I’m thrilled every time I
+            hit the road."
+          </p>
+          <h4>- John D.</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review">
+          <p>
+            "Owning a Dodge Challenger has been a dream come true. The retro
+            design mixed with modern tech gives me both style and function in
+            one package."
+          </p>
+          <h4>- Emily R.</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review">
+          <p>
+            "Our Dodge Durango has been perfect for family adventures. With
+            ample space and power, it makes every trip feel like an easy ride."
+          </p>
+          <h4>- Sarah K.</h4>
+          <span class="stars">★★★★☆</span>
+        </div>
+        <div class="review">
+          <p>
+            "I recently got a Dodge Ram, and I couldn’t be happier. It’s strong,
+            dependable, and takes on any road condition without missing a beat."
+          </p>
+          <h4>- Tom L.</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review">
+          <p>
+            "The Dodge Viper is a car of dreams. Unbelievable speed, sleek
+            design, and an adrenaline rush every time I drive!"
+          </p>
+          <h4>- Lucas M.</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dodge Car Models & Features Section -->
+    <section class="car-models">
+      <h2>Explore Dodge Models</h2>
+      <p class="section-description">
+        Discover the distinct models and features that make Dodge cars unique.
+        Click on each model to learn more.
+      </p>
+
+      <div class="models-grid">
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-charger.jpg"
+            alt="Dodge Charger"
+          />
+          <h3>Dodge Charger</h3>
+          <p>
+            Experience unmatched power with the Charger’s V8 engine and iconic
+            design.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-challenger.jpg"
+            alt="Dodge Challenger"
+          />
+          <h3>Dodge Challenger</h3>
+          <p>
+            The classic muscle car, reborn with modern tech and unbeatable
+            style.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-durango.jpg"
+            alt="Dodge Durango"
+          />
+          <h3>Dodge Durango</h3>
+          <p>
+            A versatile SUV with space, power, and safety for family adventures.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="model-card">
+          <img src="https://example.com/dodge-ram.jpg" alt="Dodge Ram" />
+          <h3>Dodge Ram</h3>
+          <p>
+            Built for strength and reliability, the Ram can handle any road or
+            job.
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Dodge Section -->
+    <section class="why-choose-dodge">
+      <h2>Why Choose Dodge?</h2>
+      <p class="section-description">
+        Discover the reasons why Dodge cars stand out and continue to be a top
+        choice for drivers worldwide.
+      </p>
+
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <img
+            src="https://example.com/performance-icon.png"
+            alt="Performance Icon"
+          />
+          <h3>Unmatched Performance</h3>
+          <p>
+            Dodge engines are known for power and performance, delivering a
+            thrilling driving experience on every road.
+          </p>
+        </div>
+        <div class="reason-card">
+          <img src="https://example.com/safety-icon.png" alt="Safety Icon" />
+          <h3>Advanced Safety</h3>
+          <p>
+            Equipped with top safety features, Dodge cars ensure protection and
+            peace of mind for every drive.
+          </p>
+        </div>
+        <div class="reason-card">
+          <img
+            src="https://example.com/technology-icon.png"
+            alt="Technology Icon"
+          />
+          <h3>Innovative Technology</h3>
+          <p>
+            Stay connected and in control with Dodge’s state-of-the-art
+            technology and entertainment systems.
+          </p>
+        </div>
+        <div class="reason-card">
+          <img
+            src="https://example.com/heritage-icon.png"
+            alt="Heritage Icon"
+          />
+          <h3>Rich Heritage</h3>
+          <p>
+            With decades of iconic designs and engineering, Dodge has a legacy
+            that’s unmatched in the automotive world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Customers Are Saying</h2>
+      <p class="section-description">
+        Discover why Dodge cars are loved by drivers worldwide. Hear from real
+        owners about their experiences.
+      </p>
+
+      <div class="testimonial-carousel">
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <img src="https://example.com/customer1.jpg" alt="Customer 1" />
+            <h3>John D.</h3>
+            <p>
+              "The Dodge Charger’s power is unmatched! I love driving it every
+              day – it’s more than just a car, it's an experience!"
+            </p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://example.com/customer2.jpg" alt="Customer 2" />
+            <h3>Emma R.</h3>
+            <p>
+              "My Dodge Durango is the perfect family car. Its safety features
+              give me peace of mind on every trip!"
+            </p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://example.com/customer3.jpg" alt="Customer 3" />
+            <h3>Chris L.</h3>
+            <p>
+              "From performance to style, Dodge always impresses. My Challenger
+              is a head-turner everywhere!"
+            </p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <img src="https://example.com/customer4.jpg" alt="Customer 4" />
+            <h3>Sophia W.</h3>
+            <p>
+              "The new Dodge Ram is the strongest truck I've owned. Perfect for
+              work and off-road fun!"
+            </p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Repeat cards to make the carousel infinite -->
+          <div class="testimonial-card">
+            <img src="https://example.com/customer1.jpg" alt="Customer 1" />
+            <h3>John D.</h3>
+            <p>
+              "The Dodge Charger’s power is unmatched! I love driving it every
+              day – it’s more than just a car, it's an experience!"
+            </p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Repeat as necessary -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dodge Models Section -->
+    <section class="featured-models">
+      <h2>Explore Our Featured Dodge Models</h2>
+      <p class="section-description">
+        Discover the power, performance, and style of our top Dodge models.
+      </p>
+
+      <div class="models-grid">
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-charger.jpg"
+            alt="Dodge Charger"
+          />
+          <h3>Dodge Charger</h3>
+          <p>
+            High-performance sedan with V8 power and bold design. The ultimate
+            American muscle experience.
+          </p>
+          <ul>
+            <li>Top speed: 196 mph</li>
+            <li>0-60 mph in 3.6 seconds</li>
+            <li>Available in AWD</li>
+          </ul>
+          <button class="cta-button">Learn More</button>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-challenger.jpg"
+            alt="Dodge Challenger"
+          />
+          <h3>Dodge Challenger</h3>
+          <p>
+            Classic muscle car with modern power. A legend on the road, with
+            iconic styling and high-speed capabilities.
+          </p>
+          <ul>
+            <li>Up to 807 horsepower</li>
+            <li>0-60 mph in 3.2 seconds</li>
+            <li>Available in RWD</li>
+          </ul>
+          <button class="cta-button">Learn More</button>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://example.com/dodge-durango.jpg"
+            alt="Dodge Durango"
+          />
+          <h3>Dodge Durango</h3>
+          <p>
+            Family-friendly SUV with impressive towing capacity and high-end
+            tech features. The perfect blend of power and utility.
+          </p>
+          <ul>
+            <li>Towing capacity: 8,700 lbs</li>
+            <li>Seating for 7</li>
+            <li>Available in AWD</li>
+          </ul>
+          <button class="cta-button">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Connected Section -->
+    <section class="stay-connected">
+      <h2>Stay Connected</h2>
+      <p class="section-description">
+        Connect with us, ask questions, or stay updated on all things Dodge.
+        We're here for you!
+      </p>
+
+      <div class="contact-social">
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <p>Follow us on social media</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="https://example.com/facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="https://example.com/twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://example.com/instagram-icon.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="https://example.com/linkedin-icon.png" alt="LinkedIn"
+            /></a>
+          </div>
+          <button class="newsletter-button">Subscribe to Newsletter</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Navigation Links -->
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Our Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p>Phone: +1 (123) 456-7890</p>
+          <p>Email: info@dodgecars.com</p>
+          <p>Address: 123 Dodge Street, Detroit, MI, USA</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="https://example.com/facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="https://example.com/twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://example.com/instagram-icon.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="https://example.com/linkedin-icon.png" alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Copyright Info -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Dodge Cars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Wait for the entire page (images, scripts, etc.) to load
+      window.addEventListener("load", function () {
+        const loaderContainer = document.querySelector(".loader-container");
+        loaderContainer.style.display = "none"; // Hide the loader
+      });
+    </script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

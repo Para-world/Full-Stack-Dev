@@ -1,0 +1,104 @@
+1. Images in HTML
+Images are embedded using the <img> tag.
+
+Syntax:
+
+<img src="image.jpg" alt="Description" width="300" height="200">
+
+src: Path to the image.
+alt: Alternative text for accessibility and SEO.
+width/height: Specify dimensions.
+
+Example:
+
+<img src="nature.jpg" alt="A beautiful nature scene" width="500">
+
+2. Videos in HTML
+HTML5 provides the <video> tag to embed videos.
+
+Syntax:
+
+<video src="video.mp4" controls width="600" height="400">
+    Your browser does not support the video tag.
+</video>
+controls: Adds play, pause, volume, etc.
+autoplay: Starts playback automatically (use carefully).
+loop: Repeats video playback.
+muted: Starts playback without sound.
+Fallback: Shown when the browser doesn't support videos.
+
+Example:
+
+<video controls width="600">
+    <source src="example.mp4" type="video/mp4">
+    <source src="example.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+
+3. Audio in HTML
+Use the <audio> tag to play audio files.
+
+Syntax:
+<audio src="audio.mp3" controls>
+    Your browser does not support the audio tag.
+</audio>
+
+Works similarly to <video>.
+Add multiple sources for better compatibility.
+
+Example:
+
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    <source src="song.ogg" type="audio/ogg">
+    Your browser does not support the audio tag.
+</audio>
+
+4. Embedding External Content (YouTube, etc.)
+Use <iframe> to embed external videos like YouTube.
+
+Syntax:
+
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/example" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+5. Accessibility Tips for Multimedia
+Always include alt text for images.
+Provide captions for videos using the <track> tag.
+Use transcripts for audio files when possible.
+
+Example: Video with Subtitles:
+
+<video controls>
+    <source src="movie.mp4" type="video/mp4">
+    <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+    Your browser does not support the video tag.
+</video>
+
+6. Multimedia Best Practices
+Optimize images using tools like TinyPNG.
+Use modern formats: WebP for images, MP4 (H.264) for videos.
+Load multimedia lazily using loading="lazy".
+
+<img src="large-image.jpg" alt="Large image" loading="lazy">
+
+
+7. Styling Multimedia
+Use CSS to enhance multimedia elements. (optional)
+
+<style>
+    img, video, audio {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        margin: 10px 0;
+        display: block;
+    }
+</style>
+

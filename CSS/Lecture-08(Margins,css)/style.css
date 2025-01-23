@@ -1,0 +1,22 @@
+/* Apply margin to all sides */
+.element {
+    margin: 20px;
+}
+
+/* Apply different margins to each side */
+.element {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+/* Apply horizontal and vertical margins */
+.element {
+    margin: 10px 20px; /* 10px top and bottom, 20px left and right */
+}
+
+/* Apply individual margins in shorthand */
+.element {
+    margin: 10px 15px 20px 25px; /* top, right, bottom, left */
+}

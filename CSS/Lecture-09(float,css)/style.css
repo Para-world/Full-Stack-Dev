@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    
+ display: flow-root;
+
+    
+}
+.wrapper{
+    border: 3px solid black;
+    margin:20px;
+    height:fit-content;
+    width: fit-content;
+}
+
+#img1{
+    float: right;
+    margin-left: 10px;
+
+}
+p{
+   
+    margin-top: 100px;
+    margin-left: 10px;
+    text-wrap: wrap;
+}
+#img2{
+    float: left;
+}

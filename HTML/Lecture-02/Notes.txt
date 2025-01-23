@@ -1,0 +1,20 @@
+1. What is Semantic HTML?
+Semantic HTML: Uses tags that clearly describe their meaning and purpose to both the browser and developers.
+
+Examples: <header>, <footer>, <article>, <section>, <nav>.
+Why Use Semantic HTML?
+
+Improves readability and maintainability of code.
+Boosts SEO (search engines understand content better).
+Enhances accessibility for screen readers.
+
+2. Common Semantic Elements
+Element	Description
+<header>	Represents introductory content or navigation links.
+<nav>	Contains navigation links.
+<section>	Groups related content, typically with a heading.
+<article>	Represents self-contained content, such as a blog post or news article.
+<aside>	Sidebar content, like ads or related links.
+<footer>	Footer content, such as copyright info or contact links.
+<main>	Represents the main content of the document.
+

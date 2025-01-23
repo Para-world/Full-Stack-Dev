@@ -1,0 +1,22 @@
+
+.container{
+    background-color: azure;
+    height: 100vh;
+}
+.box{
+     /* box-sizing: border-box;         we can also configure this with  the CSS property box-sizing: border-box; */
+
+    background-color: maroon;
+    border: 2px solid;
+    padding: 25px;
+    height: 30%;
+    width: 50%;
+    float: left;
+    text-align: center;
+    min-height: 50%;
+    max-height: 80%;
+    min-width: 20%;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+

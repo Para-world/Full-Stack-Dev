@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Demo</title>
+</head>
+<body>
+    <h1>Canvas and SVG Graphics</h1>
+    
+    <h2>Canvas Example</h2>
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Draw rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Add text
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("Canvas Text", 70, 90);
+    </script>
+    
+    <h2>SVG Example</h2>
+    <svg width="400" height="200">
+        <circle cx="200" cy="100" r="50" fill="purple" />
+        <text x="150" y="110" fill="white" font-size="20">SVG Text</text>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@font-face{
+   src: url(./fonts/Poppins-Regular.ttf);
+   font-family: Poppins;
+}
+@font-face{
+    src: url(fonts/Poppins-Bold.ttf);
+    font-family: Poppins-high;
+}
+@font-face{
+    src: url(fonts/Poppins-BlackItalic.ttf);
+    font-family: Poppins-BlackItalic;
+}
+@font-face{
+    src: url(fonts/Poppins-BoldItalic.ttf);  
+    font-family: Poppins-BoldItalic; /* we can give whatever name we wanted to give me */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color:black;
+    color: white;
+}
+h1{
+    font-family: Poppins-high;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  /*we give multiple fonts  to make sure it works on all browsers */
+
+}
+p{
+    font-family: "Poppins", sans-serif; /*we are getting this  font from google fonts api */
+    font-size: 1.1em;
+    font-weight: bold;
+    font-style: normal;
+}

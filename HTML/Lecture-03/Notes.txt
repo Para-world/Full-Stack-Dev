@@ -1,0 +1,26 @@
+1. Text Elements in HTML
+HTML offers various tags for displaying and structuring text.
+
+Tag	Description
+<h1> to <h6>	Headings, with <h1> being the largest.
+<p>	Paragraph of text.
+<br>	Line break.
+<hr>	Horizontal line (thematic break).
+<blockquote>	Quoted content, typically indented.
+
+2. Formatting Text
+HTML allows basic text formatting using specific tags:
+
+Tag	Description
+<b>	Bold text.
+<strong>	Important text, semantically bold.
+<i>	Italic text.
+<em>	Emphasized text, semantically italic.
+<mark>	Highlighted text.
+<small>	Smaller text.
+<sup>	Superscript text (e.g., exponents).
+<sub>	Subscript text (e.g., chemical formulas).
+<del>	Strikethrough text.
+<ins>	Underlined text (inserted content).
+<code>	Code snippets.
+<pre>	Preformatted text (maintains spacing).

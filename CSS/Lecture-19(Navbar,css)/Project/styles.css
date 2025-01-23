@@ -1,0 +1,1067 @@
+/* Navbar styles here (same as before) */
+/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff, #dfe9f3);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #555;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a,
+.search-bar,
+.login,
+.signup {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #555;
+  transform: scale(1.05);
+}
+
+.search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+  width: 200px;
+}
+
+.search-bar:focus {
+  border-color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: #555;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.login,
+.signup {
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.login:hover,
+.signup:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #555;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .search-bar {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: inline;
+  }
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 1s ease;
+  width: 300%;
+  animation: slide 10s infinite;
+}
+
+.carousel-content {
+  position: relative;
+  min-width: 100%;
+}
+
+.carousel-content img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  animation: fadeIn 2s ease;
+}
+
+.text-overlay h1,
+.text-overlay p {
+  margin: 5px 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel {
+    height: 40vh;
+  }
+
+  .text-overlay {
+    bottom: 15%;
+    left: 5%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+/* Navbar and Carousel styles (same as before) */
+
+/* Cards Section */
+.card-section {
+  padding: 50px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #555;
+}
+
+.card-content button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Navbar, Carousel, and Cards styles (as per previous code) */
+
+/* Dodge Cars Showcase Section */
+.showcase-section {
+  padding: 50px 20px;
+  background: #e5e5e5;
+  text-align: center;
+}
+
+.showcase-section h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.showcase {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.showcase:hover {
+  transform: scale(1.02);
+}
+
+.showcase img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-content {
+  padding: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+.showcase-content h3 {
+  font-size: 1.8em;
+  color: #333;
+}
+
+.showcase-content p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .showcase {
+    flex-direction: column;
+  }
+
+  .showcase img,
+  .showcase-content {
+    width: 100%;
+  }
+}
+
+/* Infinite Carousel Section */
+.infinite-carousel {
+  overflow: hidden;
+  width: 100%;
+  background: #e5e5e5;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Enhanced Customer Reviews Section */
+.customer-reviews {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+}
+
+.customer-reviews h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.review-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.review {
+  display: none;
+  /* Ensures only the active review shows */
+  font-size: 1.1em;
+  color: #444;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.review.active {
+  display: block;
+  /* Only active review is visible */
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.review h4 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stars {
+  font-size: 1.2em;
+  color: #ffbf00;
+  /* Gold star color */
+}
+
+.review p {
+  margin-bottom: 15px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .customer-reviews h2 {
+    font-size: 2em;
+  }
+
+  .review {
+    padding: 20px;
+  }
+}
+
+/* Dodge Car Models & Features Section */
+.car-models {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.car-models h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.model-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.model-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.model-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.model-card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.model-card button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #ffffff;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.model-card button:hover {
+  background: #555;
+}
+
+/* Why Choose Dodge Section */
+.why-choose-dodge {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #e0e0e0, #f8f8f8);
+}
+
+.why-choose-dodge h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reason-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reason-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.reason-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Customer Testimonials Section */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.testimonials h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Carousel setup */
+.testimonial-carousel {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollCarousel 30s linear infinite;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual testimonial card */
+.testimonial-card {
+  flex: 0 0 25%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 1.1em;
+}
+
+/* Featured Dodge Models Section */
+.featured-models {
+  padding: 60px 20px;
+  background: #e9f0f5;
+  text-align: center;
+}
+
+.featured-models h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.models-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.model-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.model-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.model-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.model-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.model-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.model-card ul {
+  list-style: none;
+  padding: 0;
+  color: #666;
+}
+
+.model-card li {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ff4500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e03d00;
+}
+
+
+/* Stay Connected Section */
+.stay-connected {
+  padding: 60px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.stay-connected h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
+
+/* Social Media Links */
+.social-media {
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.social-media p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.newsletter-button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background: #0056b3;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-nav,
+.footer-contact,
+.footer-social {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.footer-nav h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin: 10px 0;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #ff4500;
+}
+
+.footer-contact p {
+  font-size: 1em;
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social .social-icons a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #bbb;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Preloader Styles */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Light background */
+  z-index: 9999;
+  /* Makes sure the loader appears above all other content */
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey background */
+  border-top: 16px solid #ff4500;
+  /* Orange color for the spinning part */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  /* Spin animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

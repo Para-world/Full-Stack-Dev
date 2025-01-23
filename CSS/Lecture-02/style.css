@@ -1,0 +1,62 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
+    height: 80vh;
+    width: 40vw;
+}
+
+.box1 {
+    background-color: red;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    /* font-stretch: ; */
+    text-transform: capitalize;
+    text-decoration: none;
+    /* font-size: 10rex; */
+    /* overflow:hidden;  */
+    /* we use this for hide the unwanted content */
+}
+
+.box2 {
+    /* position: absolute; */
+    /* top: 50%; */
+   
+    background-color: antiquewhite;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 15px;
+}
+
+.box3 {
+    background-color: yellowgreen;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 15px;
+    border: solid red 10px;
+    border-style: ridge;
+}

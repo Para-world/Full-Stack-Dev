@@ -1,0 +1,50 @@
+1. Adding Images
+The <img> tag is used to display images in HTML.
+
+Syntax:
+<img src="image-path" alt="description" width="optional-width" height="optional-height">
+
+src: Path to the image file (URL or local path).
+alt: Text displayed if the image cannot load (important for accessibility).
+width and height: Specify dimensions (optional).
+
+Example:
+<img src="https://via.placeholder.com/150" alt="Placeholder Image" width="150">
+
+2. Adding Videos
+The <video> tag is used to embed videos.
+
+<video controls width="optional-width">
+    <source src="video-path.mp4" type="video/mp4">
+    <source src="video-path.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+controls: Adds playback controls like play, pause, volume, etc.
+<source>: Specifies the video file and format.
+Fallback Text: Shown if the browser doesn’t support videos.
+we can also use iframe to embed videos from other websites like youtube, vimeo etc.
+.you can use loop and autoplay attribute to make video auto play and loop on the webpage.
+.don't forget to add controls attribute to make video controls visible on the webpage or add muted attribute to mute the video.
+
+<video controls width="320">
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+3. Adding Audio
+The <audio> tag is used to embed audio files.
+<audio controls>
+    <source src="audio-path.mp3" type="audio/mpeg">
+    <source src="audio-path.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+
+controls: Adds playback controls for play, pause, and volume.
+
+<audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+

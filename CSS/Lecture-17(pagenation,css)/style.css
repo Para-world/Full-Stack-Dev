@@ -1,0 +1,18 @@
+.pagenation{
+    text-align: center;
+}
+.pagenation a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagenation a.active{
+    background-color: rgb(23, 206, 23);
+    border-radius:6px;
+    font-weight: bold;
+}
+.pagenation a:hover:not(.active){
+    background-color: rgb(196, 195, 195);
+    border-radius: 6px;
+}

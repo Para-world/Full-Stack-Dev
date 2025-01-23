@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Table</h1>
+    <table>
+        <caption>Employee Data</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Position</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>30</td>
+            <td>Developer</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>25</td>
+            <td>Designer</td>
+        </tr>
+        <tr>
+            <td>Mike</td>
+            <td>35</td>
+            <td>Manager</td>
+        </tr>
+    </table>
+</body>
+</html>

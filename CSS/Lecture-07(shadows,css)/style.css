@@ -1,0 +1,24 @@
+h1{
+    text-shadow: 3px 3px 5px hsl(348, 89%, 52%),-3px -3px 5px hsl(178, 89%, 49%);
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(240, 234, 234);
+    box-shadow: 3px 3px 5px; 
+    /* filter: drop-shadow(); */
+ }
+h2{
+    text-shadow: 4px 4px 6px hsl(128, 75%, 47%),-3px -3px  6px hsl(221, 77%, 45%);
+
+}
+#box2{
+    height: 200px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:transparent;
+    filter: drop-shadow(3px 3px 5px  rgba(0,0,0,0.5));
+
+    
+}

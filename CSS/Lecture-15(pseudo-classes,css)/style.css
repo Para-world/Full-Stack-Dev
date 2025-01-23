@@ -1,0 +1,49 @@
+/* a:link{
+    color: blue;
+}
+a:hover{
+    color: hsl(203, 86%, 54%);
+    font-size: 1.1em;
+}
+a:active{
+    color: hsl(264, 92%, 50%);
+    font-size: 1.1em;
+}
+a:visited{
+    color: grey;
+} */
+
+
+
+
+/* li:hover{
+    background-color: hsl(60, 90%, 61%);
+}
+li:not(hover){
+    background-color: grey;
+} */
+
+
+
+/* 
+li:nth-child(5){                                /* 2,3n,3n+1*/
+    /* background-color: red;
+}  */ 
+
+
+
+
+
+
+
+
+
+#box p{
+    background-color: crimson;
+    padding: 10px;
+    display: none;
+}
+#box:hover p{
+    display: block;
+    
+}
