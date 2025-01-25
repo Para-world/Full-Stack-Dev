@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+}
+#box{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 25%;
+    font-size: 6em;
+    text-align: center;
+    
+    /* Animation */
+    animation-name: glow;
+    animation-duration: 2s;
+    /* animation-direction: alternate; */
+    /* animation-play-state: running; */
+    animation-timing-function: ease-in-out;
+    
+}
+#box:hover{
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes slideleft{
+    from{transform: translateX(300%);}
+}
+
+@keyframes slideright{
+    from{transform: translatex(-300%);}
+}
+@keyframes up{
+    from{transform: translateY(300%);}
+}
+@keyframes down{
+    from{transform: translateY(-300%);}
+}
+@keyframes rotate{
+    100%{transform: rotatey(360deg);}
+}
+@keyframes grow{
+    25%{transform: scale(2, 2);}
+}
+@keyframes shrink{
+    50%{transform: scale(0.5, 0.5);}
+}
+@keyframes fade{
+    50%{opacity: 0;}
+}
+@keyframes colorchange{
+    0%{background-color: red}
+    20%{background-color: magenta}
+    40%{background-color: blue}
+    60%{background-color: green}
+    80%{background-color: yellow}
+    100%{background-color: red}
+}
+@keyframes glow{
+    50%{box-shadow: 0px 0px 50px hsl(258, 96%, 45%);}
+}
