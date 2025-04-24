@@ -11,8 +11,13 @@ h1{
     font-size: 5rem;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
-    font-stretch: ultra-expanded;
+    font-stretch: extra-expanded;
+    /* word-spacing: 12px; */
+    /* letter-spacing: 10px; */
 }
+/* p{
+    line-height: 25px;
+} */
 #box1{
     background-color: yellowgreen;
     height: fit-content;

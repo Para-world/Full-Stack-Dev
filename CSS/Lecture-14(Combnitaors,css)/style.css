@@ -1,3 +1,6 @@
 .container p{
     color: red;
 }
+.container > p{
+    color: green;
+}
